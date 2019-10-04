@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./assets/javascript/game.js">
+</head>
+<body>
+
+    <!-- display the following... -->
+
+    <!-- welcome to Hangman, someting someting style! -->
+    <h1>HANGMAN GRRRRR</h1>
+
+    <!--  PRESS ANY KEY TO GET STARTED-->
+    <br>
+    <h3>Press any key to get started!</h3>
+
+    <!-- Display center WINS: -->
+    <p>WINS:</p>
+
+    <!-- word guess here " _ _ _ _ _ _" etc... -->
+
+    <!--no. of guesses remaining  -->
+    <p>Guesses Remaining:</p>
+    <!-- letters already guessed -->
+    <p>Letters already guessed:</p>
+    <!-- start script here -->
+    <script type="text/javascript">
+
+        // <!-- variables: please describe -->
+        
+            var wordsArray =[ "schnauzer", "poodle", "doberman", "rotweiler", "labrador", "chihuahua", "pomeranian", "dalmation", "husky", "pitbull", "bloodhound"]
+                                // <!-- question: -->
+            var word = wordsArray[Math.floor(Math.random() * words.length)];
+            // picks a random word from wordArray
+
+                            // <!-- answer: -->
+        // <!-- shows the answer to word picked in "_"s equal to the number of letters in the word -->
+
+        var answerArray = [];
+        for (var i = 0; i < word.length; i++) {
+                     answerArray[i] = "_";
+        }
+
+        // <!-- create a variable to hold the number of remaining letters to be guessed -->
+        var remainingLetters = word.length;
+
+                // ***********GAME PLAY***********
+
+            // while there are undiscovered letters: 
+        while (remainingLetters > 0) {
+            // players need to see their pogress
+            alert(answerArray.join(" "));
+            // players need to guess letters to play
+            var guess = prompt("Guess a letter")
+            // if the players guess blank or cancel
+            if (guess === null) {
+                // exit the game
+                break;
+            } 
+            else if (guess.length !== 1) {
+                // tell player they can only guess one letter at a time
+                alert("Please choose one letter only")
+            // correct guesses
+            }
+            else () {
+                //  show the correct letters guessed
+                for (var j = 0; j < word.length; j++) {
+                    if (word[j] === guess) {
+                        answerArray[j] === guess; remainingLetters--;
+                    }
+                }
+            }
+        }
+
+    </script>
+
+        
+
+</body>
+</html>
