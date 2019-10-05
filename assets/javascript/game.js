@@ -89,7 +89,7 @@ document.onkeyup = function(event) {
     } else {
 //functions are only executed when a-z are pressed on keyboard
         if(event.keyCode >= 65 && event.keyCode <= 90) {
-            checkGuess(event.key.toLowerCase()); 
+            checkGuess(event.key.toUpperCase()); 
             updateScreen();
             isWinner();
             isLoser();
@@ -99,6 +99,6 @@ document.onkeyup = function(event) {
 
 
 setup();
-// updateScreen();
-// console.log(randomWord)
+updateScreen();
+console.log(randomWord)
 
