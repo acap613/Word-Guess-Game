@@ -88,6 +88,7 @@ document.onkeyup = function(event) {
         gameOver = false;
     } else {
 //functions are only executed when a-z are pressed on keyboard
+
         if(event.keyCode >= 65 && event.keyCode <= 90) {
             checkGuess(event.key.toUpperCase()); 
             updateScreen();
@@ -95,6 +96,8 @@ document.onkeyup = function(event) {
             isLoser();
         }
     }
+    //maybe add an alert or something to pop up "you win!" or "you lose!" 
+    //then restart the game...
 };
 
 
